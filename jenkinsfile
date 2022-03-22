@@ -1,0 +1,19 @@
+pipeline {
+    agent any 
+
+    stages{
+        stage('2')  {
+            steps {
+                script {
+                    echo "Geocitizen!"
+                }
+            }
+        }
+
+        stage ('1') {
+            steps {
+                sh "echo 'Geocitizen!'"
+            }
+        }        
+    }
+}
