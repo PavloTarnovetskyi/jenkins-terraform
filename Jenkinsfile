@@ -4,6 +4,7 @@ pipeline {
     
     environment {
         AWS_DEFAULT_REGION= "eu-north-1"
+        withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>])
     }
 
     tools {
@@ -18,13 +19,11 @@ pipeline {
         }
         stage('Terraform init'){
             steps{
-                withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-                
+                                 
                 sh ("terraform init");
                 sh ("terraform validate");
                 sh ("terraform apply --auto-approve");
-
-                }
+              
             }
         }
     }
