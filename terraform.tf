@@ -1,3 +1,6 @@
+provider "aws" {
+  
+}
 resource "aws_instance" "teraform_ubuntu" {
   ami = "ami-092cce4a19b438926" # Ubuntu Server 20.04 LTS ami
   instance_type = "t3.micro"
