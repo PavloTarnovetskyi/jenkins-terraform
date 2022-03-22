@@ -1,6 +1,5 @@
 provider "aws" {
   region = "eu-north-1"
-  profile = "terraform"
 }
 
 resource "aws_instance" "teraform_ubuntu" {
