@@ -5,6 +5,7 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION= "eu-north-1"
         withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>])
+        
     }
 
     tools {
