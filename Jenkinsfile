@@ -17,7 +17,7 @@ pipeline {
     stages{
         stage('Terraform git checkout') {
             steps {
-                git credentialsId: 'github', url: 'git@github.com:PavloTarnovetskyi/terraform-ansible.git'
+                 git branch: 'jenkins', credentialsId: 'github', url: 'git@github.com:PavloTarnovetskyi/terraform-ansible.git'
              }
         }
         stage('Terraform init'){
