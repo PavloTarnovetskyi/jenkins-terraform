@@ -122,7 +122,7 @@ resource "aws_security_group" "teraform_PostgreSQL_DB" {
     [teraform_Postgres_DB]
     ${aws_instance.teraform_Postgres_DB.public_ip}
     EOT
-      filename = "../ansible/hostsIP.txt"
+      filename = "home/pavlo/ansible/hostsIP.txt"
     }
 
     resource "local_file" "public_ip_for_deploy" {
@@ -132,5 +132,5 @@ resource "aws_security_group" "teraform_PostgreSQL_DB" {
       DB_ip='${aws_instance.teraform_Postgres_DB.public_ip}';
       EOT
 
-        filename = "../ansible/roles/terraform_ubuntu/files/serversIP"
+        filename = "home/pavlo/ansible/roles/terraform_ubuntu/files/serversIP"
       }
